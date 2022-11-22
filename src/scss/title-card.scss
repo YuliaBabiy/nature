@@ -1,0 +1,44 @@
+.title-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  max-width: 718px;
+  border: 7px solid white;
+  padding: 30px;
+  margin: 60px auto;
+  color: white;
+  background: transparent;
+  min-height: 419px;
+  box-shadow: 0 0 40px 4px rgb(26 26 26 / 40%);
+
+  h1 {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 3px;
+    font-family: RobotoLight, sans-serif;
+  }
+
+  h2 {
+    margin-top: 16px;
+    font-size: 4.5rem;
+    overflow: hidden;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  @media screen and (max-width: 711px) {
+    h1 {
+      font-size: 14px;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+}
+}
