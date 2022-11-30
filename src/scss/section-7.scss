@@ -1,0 +1,57 @@
+#section-7 {
+  .row>* {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .mg-top {
+    margin-top: 48px;
+  }
+
+  .about-us {
+    padding: 50px 0;
+
+    &__container {
+      padding: 24px;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 30px;
+      text-align: left;
+    }
+
+    &__title {
+      @extend %title;
+    }
+
+    &__pr {
+      @extend %paragraph;
+      margin-top: 20px;
+    }
+
+    &__link {
+      @extend %link;
+    }
+
+
+    .link-border {
+      width: 98px;
+    }
+
+
+    &__middle-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+
+      h1 {
+        @extend %title-h2;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

@@ -27,16 +27,7 @@
   }
 
   a {
-    font-family: OpenSans;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.2;
-  }
-
-  .advice-border {
-    margin-top: 2px;
-    height: 2px;
-    width: 50px;
-    background-color: #c5a28f;
+    @extend %link;
   }
 }
+
