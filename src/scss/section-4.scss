@@ -1,4 +1,5 @@
 #section-4 {
+  overflow: hidden;
   .row>* {
     padding-left: 0;
     padding-right: 0;
@@ -23,34 +24,38 @@
   .nature-second-col {
     height: 494px;
 
-    .row {
+    .nature-subtitle__container {
       height: 100%;
     }
-  }
 
-  .nature-third-col {
-    height: 494px;
-  }
+    .nature-subtitle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+      height: 50%;
 
-  .nature-subtitle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
-    text-align: center;
-    height: 50%;
-
-    h1 {
-      font-size: 1.5rem;
-      font-family: OpenSans, sans-serif;
-      line-height: 1.3;
+      h1 {
+        font-size: 1.5rem;
+        font-family: OpenSans, sans-serif;
+        line-height: 1.3;
+      }
     }
-  }
 
-  .nature-svg {
-    width: 64px;
-    height: 50%;
-    margin-bottom: 15px;
-    object-fit: inherit;
+    .nature-subtitle__img {
+      height: 50%;
+    }
+
+    .nature-svg {
+      width: 64px;
+      height: 50%;
+      margin-bottom: 15px;
+      object-fit: inherit;
+    }
+
+    .nature-img-horse {
+
+    }
   }
 }

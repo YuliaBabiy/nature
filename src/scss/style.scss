@@ -1,4 +1,18 @@
-@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/maps";
+
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/helpers";
+@import "~bootstrap/scss/transitions";
+
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+
 @import "./nullstyle.scss";
 @import "./section-1-6.scss";
 @import "./section-2.scss";
@@ -6,32 +20,29 @@
 @import "./section-4.scss";
 @import "./section-5.scss";
 @import "./section-7.scss";
+@import "./section-8.scss";
+@import "./section-9.scss";
 
 $header-height: 56px;
 
 @font-face {
   font-family: RobotoLight;
-  src: url("../../public/font/Roboto-Light.ttf");
+  src: url("../../public/font/Roboto-Light.woff") format('woff');
 }
 
 @font-face {
   font-family: Roboto;
-  src: url("../../public/font/Roboto-Regular.ttf");
+  src: url("../../public/font/Roboto-Regular.woff") format('woff');
 }
 
 @font-face {
   font-family: PlayfairDisplay;
-  src: url("../../public/font/PlayfairDisplay-VariableFont_wght.ttf");
-}
-
-@font-face {
-  font-family: PlayfairDisplayItalic;
-  src: url("../../public/font/PlayfairDisplay-Italic-VariableFont_wght.ttf");
+  src: url("../../public/font/PlayfairDisplay-Regular.woff") format('woff');
 }
 
 @font-face {
   font-family: OpenSans;
-  src: url("../../public/font/OpenSans-VariableFont_wdth\,wght.ttf");
+  src: url("../../public/font/OpenSans-Regular.woff") format('woff');
 }
 
 body {
@@ -42,10 +53,16 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 1;
+
+  nav {
+    background-color: white;
+  }
 }
 
 * {
   font-family: PlayfairDisplay, serif;
+
 }
 
 %paragraph {
@@ -106,6 +123,78 @@ header {
   margin-right: 0;
 }
 
+.footer {
+  background-color: rgb(29, 27, 27, 0.92);
+  text-align: center;
+  padding: 40px 0 70px;
+  @extend %paragraph;
+  font-size: 12px;
+}
+
+@keyframes slide {
+  from {
+    top: -100vh;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.title-card, .agency-info-section {
+  position: relative;
+
+  &.animated {
+    animation: slide;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    right: -100vw;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+.animate-right {
+  position: relative;
+
+  &.animated {
+    animation: slide-right;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes slide-left {
+  from {
+    left: -100vw;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+.animate-left {
+  position: relative;
+
+  &.animated {
+    animation: slide-left;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+}
+
+
 @media screen and (max-width: 576px) {
   .picture-section {
     max-height: 494px;
@@ -113,6 +202,18 @@ header {
 
   #section-4 .nature-col:nth-child(1) {
     display: block;
+  }
+
+  #section-4 .nature-second-col {
+    height: 100%;
+
+    .nature-subtitle {
+      height: 30%;
+    }
+
+    .nature-subtitle__img {
+      height: 70%;
+    }
   }
 
   .about-us img {
@@ -127,6 +228,26 @@ header {
 
   .about-us img {
     height: 540px;
+  }
+
+  #section-4 .nature-second-col {
+    height: 100%;
+
+    .nature-subtitle {
+      height: 30%;
+    }
+
+    .nature-subtitle__img {
+      height: 70%;
+    }
+  }
+
+  #section-8 .section-8 {
+    width: 100%;
+
+    &__img {
+      height: 388px;
+    }
   }
 }
 
@@ -150,6 +271,14 @@ header {
   .about-us__img {
     height: 700px;
   }
+
+  #section-8 .section-8 {
+    width: 340px;
+
+    &__img {
+      height: 224px;
+    }
+  }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -164,14 +293,35 @@ header {
   .about-us img {
     max-height: 300px;
   }
+
+  
+  #section-8 .section-8 {
+    width: 300px;
+
+    &__img {
+      height: 189px;
+    }
+  }
 }
 
 @media screen and (min-width: 1201px) {
+  .picture-section {
+    min-height: 341px;
+  }
+
   .about-us img {
     max-height: 340px;
   }
 
   .about-us__info {
     height: 400px;
+  }
+
+  #section-8 .section-8 {
+    width: 366px;
+
+    &__img {
+      height: 240px;
+    }
   }
 }

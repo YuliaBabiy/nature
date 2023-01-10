@@ -1,0 +1,30 @@
+#section-8 {
+  padding: 100px 0;
+
+  .section-8 {
+    padding: 30px;
+    background-color: white;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+
+    &__img {
+      height: 240px;
+    }
+    
+    &__title {
+      @extend %title;
+      margin: 20px 0
+    }
+
+    &__text {
+      @extend %paragraph;
+    }
+  }
+
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}

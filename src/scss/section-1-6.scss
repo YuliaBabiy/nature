@@ -1,22 +1,26 @@
 #section-1 {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.15),
       rgba(0, 0, 0, 0.15)), url("../../src/img/mountains.jpeg");
+
+  overflow: hidden;
 }
 
 #section-6 {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.15),
       rgba(0, 0, 0, 0.15)), url("../../src/img/mountain-2.jpeg");
+
+  overflow: hidden;
 }
 
 $header-height: 56px;
 
 .card-section {
   background-size: cover;
-  padding: 20px 40px;
+  padding: 30px 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - $header-height);
+  min-height: calc(100vh - $header-height);
 }
 
 .title-card {

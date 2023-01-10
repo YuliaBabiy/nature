@@ -4,10 +4,13 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
+    "dev-host": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "./deploy.sh"
   },
   "devDependencies": {
+    "purgecss": "^5.0.0",
     "sass": "^1.55.0",
     "sass-loader": "^13.1.0",
     "vite": "^3.2.0"

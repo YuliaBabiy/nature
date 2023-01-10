@@ -1,0 +1,61 @@
+#section-9 {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15)), url("../../src/img/forest-black-wite.jpg");
+
+  background-size: cover;
+  padding: 50px 20px;
+  overflow: hidden;
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .section-9 {
+    background-color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+
+    &__img {
+      border-radius: 50%;
+      width: 255px;
+      height: 255px;
+    }
+
+    &__title {
+      @extend %title-h2;
+      margin: 20px 0 10px;
+    }
+
+    &__h2 {
+      font-family: OpenSans;
+      font-size: 16px;
+    }
+
+    &__title-sec {
+      @extend %paragraph;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    &__paragraph {
+      @extend %paragraph;
+    }
+
+    &__links {
+      display: flex;
+    }
+
+    &__links img {
+      margin: 0 15px;
+      width: 32px;
+      height: 32px;
+    }
+
+  }
+}
